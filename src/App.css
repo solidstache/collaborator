@@ -8,7 +8,8 @@
 }
 
 .App-header {
-  /*background-color: #282c34; */
+  background-color: #116466;
+ /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,10 +25,19 @@
 
 .menu.top-menu {
   border: none;
-  background-color:#d9b08c ;
+  box-shadow: none;
+
+  background-color:#d9b08c;
+}
+
+.menu.main-menu {
+  background-color:#d9b08c;
 }
 
 .logo {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  color: #d9b08c;
+  text-shadow: #FFCB9A;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
+

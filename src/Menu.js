@@ -11,7 +11,7 @@ export default () => (
       <Container>
           <Menu.Menu position="right">
               <Dropdown text='Login' loginform={loginForm} simple item/>
-              <Menu.Item as="a" name="register" icon="user plus" iconPosition="left">
+              <Menu.Item  as="a" name="register" icon="user plus" iconPosition="left">
                   Register
               </Menu.Item>
           </Menu.Menu>
