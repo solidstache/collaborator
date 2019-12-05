@@ -4,6 +4,7 @@ import Home from './Home';
 import Projects from './Projects';
 import Userspage from './Userspage';
 import Myprofile from './Myprofile';
+import Myproject from './Myprojects';
 
 export default class MenuTabular extends Component{
   state = { activeItem: 'home' };
@@ -28,7 +29,7 @@ export default class MenuTabular extends Component{
       page = <Myprofile/>;
     }
     if(pageState === 'My Projects'){
-      page = null;
+      page = <Myproject/>;
     }
 
     return (
