@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Icon, Container } from 'semantic-ui-react';
+import { Project, sampleProjects }  from './ProjectClass.js';
+/*
 
 const items = [
   {
@@ -75,7 +77,15 @@ const items = [
     meta: 'This is a subtitle'
   },
 ]
+*/
+const items = [];
+for(var i = 0; i < sampleProjects.length; i++ ) {
+items.push({header: sampleProjects[i].projectName,
+	   className:  sampleProjects[i].userName,
+	   description: sampleProjects[i].description,
+	   meta: sampleProjects[i].userName,
+	   extra:  sampleProjects[i].likes + " likes"})
+}
 
-const ProjectGroupDisplay = () => <Card.Group items={items} />
-
+const ProjectGroupDisplay = () => <Card.Group items={ items } />;
 export default ProjectGroupDisplay;

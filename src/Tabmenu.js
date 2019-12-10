@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Segment, Container } from 'semantic-ui-react';
 import Home from './Home';
-import Projects from './Projects';
+import ProjectList from './Projects';
 import Userspage from './Userspage';
 import Myprofile from './Myprofile';
 import Myproject from './Myprojects';
@@ -20,7 +20,7 @@ export default class MenuTabular extends Component{
       page = <Home/>;
     }
     if(pageState === 'projects'){
-      page = <Projects/>;
+      page = <ProjectList/>;
     }
     if(pageState === 'users'){
       page = <Userspage/>;
