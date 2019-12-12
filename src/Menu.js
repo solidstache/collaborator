@@ -1,6 +1,6 @@
 import React from 'react';
-import _ from 'lodash'
-import faker from 'faker'
+import _ from 'lodash';
+import faker from 'faker';
 import { Dropdown, Container, Menu, Search, Grid, Header, Segment } from 'semantic-ui-react';
 
 const loginForm = [
@@ -40,8 +40,8 @@ export class SearchProjects extends React.Component {
     // method that gets executed when a result is clicked
     handleResultSelect = (e, { result }) => this.setState({ value: result.title })
 
-    // method that handles the actual searching uses the lodash library to help 
-    // array and object handling 
+    // method that handles the actual searching uses the lodash library to help
+    // array and object handling
     handleSearchChange = (e, { value }) => {
 	    this.setState({ isLoading: true, value })
 	setTimeout(() => {

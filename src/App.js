@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Container } from 'semantic-ui-react';
 import Menu from './Menu';
-import Tabmenu from './Tabmenu';
+import TabMenu from './TabMenu';
 
 const App = () => (
     <Fragment>
@@ -10,7 +10,7 @@ const App = () => (
         <h1 className='logo'>Collaborator</h1>
       </Container>
       <Container>
-          <Tabmenu/>
+          <TabMenu/>
       </Container>
     </Fragment>
 );

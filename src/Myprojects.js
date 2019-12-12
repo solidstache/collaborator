@@ -30,7 +30,8 @@ const sampleUser2 = new SampleUser('The Experienced One', 'Programmer', 'Java, J
 
 const sampleProject1 = new SampleProject('First Project', 'Windows Utility Program',
     [sampleUser1, sampleUser2], 'Java',
-    'I am currently working on a file organizer for a small project. This is mainly for practice',[]);
+    'I am currently working on a file organizer for a small project. ' +
+    'This is mainly for practice. If interested please feel free to apply!',[]);
 
 const myProjectLayout = () => (
     <Container>
