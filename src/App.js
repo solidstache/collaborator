@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Container } from 'semantic-ui-react';
 import Menu from './Menu';
-import TabMenu from './TabMenu';
+import TabMenu from './Tabmenu';
 
 const App = () => (
     <Fragment>

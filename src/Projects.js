@@ -83,7 +83,8 @@ for(var i = 0; i < sampleProjects.length; i++ ) {
 items.push({header: sampleProjects[i].projectName,
 	   description: sampleProjects[i].description,
 	   meta: sampleProjects[i].userName,
-	   extra:  sampleProjects[i].likes + " likes"})
+	   extra:  sampleProjects[i].likes + " likes",
+	   href: ('#project' + i + ' url')});
 }
 
 const ProjectGroupDisplay = () => <Card.Group items={ items } />;

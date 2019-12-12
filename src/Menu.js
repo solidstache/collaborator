@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import faker from 'faker';
-import { Dropdown, Container, Menu, Search, Grid, Header, Segment } from 'semantic-ui-react';
+import { Dropdown, Container, Menu, Search, Grid, Header, Segment, Form, Input, Button, Label } from 'semantic-ui-react';
 
 const loginForm = [
   { key: 1, text: 'Username', value: 1 },
@@ -15,14 +15,124 @@ export default () => (
 	      <SearchProjects/>
 	  </Menu.Menu>
           <Menu.Menu position="right">
+            <LoginForm/>
+	  </Menu.Menu>
+      </Container>
+    </Menu>
+)
+
+/*
+ *
               <Dropdown text='Login' loginform={loginForm} simple item/>
               <Menu.Item  as="a" name="register" icon="user plus" iconPosition="left">
                   Register
               </Menu.Item>
-          </Menu.Menu>
-      </Container>
-    </Menu>
-)
+ *
+ * */
+
+
+class LoginForm extends React.Component {
+	constructor(props) {
+		super(props);
+		this.status = "NoUser";
+		this.userName = "";
+	}
+
+	handleLoginClicked() {
+		this.status = "LoggingIn";
+		this.forceUpdate();
+	}
+	// Change this.userName assignment to be what was actually typed
+	handleLogin() {
+		this.status = "LoggedIn";
+		this.userName = "user1";
+		this.forceUpdate();
+	}
+
+	render() {
+		if(this.status == "NoUser") {
+			return (
+			<Menu.Menu>
+        		<Menu.Item as="a" name="login" icon="user plus" iconPosition="left" 
+			onClick={() => this.handleLoginClicked()}>
+				Login
+			</Menu.Item>
+              		<Menu.Item  as="a" name="register" icon="user plus" iconPosition="left">
+                		  Register
+              		</Menu.Item>
+		</Menu.Menu>);
+		} else if(this.status == "LoggingIn") {
+			return (
+			<Menu.Item as="a" name="login">
+			  <Form>
+			    <Form.Field>
+			      <Input placeholder='Username'/>
+			    </Form.Field>
+
+			    <Form.Field>
+			      <Input placeholder='Password'/>
+			    </Form.Field>
+	
+			    <Form.Field>
+			      <Button type='submit'
+				onClick={() => this.handleLogin()}>Submit </Button>
+			    </Form.Field>
+			  </Form>
+			</Menu.Item>
+			);
+		} else {
+			return (
+			<Menu.Item as="a" name="login">
+				<Label/> Welcome, {this.userName}
+			</Menu.Item>
+		);
+		}
+	}
+
+/*
+	renderLoginOptions() {
+		return(
+			<Menu.Menu>
+        		<Menu.Item as="a" name="login" icon="user plus" iconPosition="left" 
+			onClick={() => this.handleLoginClicked()}>
+				Login
+			</Menu.Item>
+              		<Menu.Item  as="a" name="register" icon="user plus" iconPosition="left">
+                		  Register
+              		</Menu.Item>
+		</Menu.Menu>);
+	}
+
+	renderLoggingIn() {
+		return(
+			<Menu.Item as="a" name="login">
+			  <Form>
+			    <Form.Field>
+			      <Input placeholder='Username'/>
+			    </Form.Field>
+
+			    <Form.Field>
+			      <Input placeholder='Password'/>
+			    </Form.Field>
+	
+			    <Form.Field>
+			      <Button type='submit'
+				onClick={() => this.handleLogin()}>Submit </Button>
+			    </Form.Field>
+			  </Form>
+			</Menu.Item>
+		);
+	}
+
+	renderLoggedIn() {
+		return(
+			<Menu.Item as="a" name="login">
+				<Label/> Welcome, {this.userName}
+			</Menu.Item>
+		);
+	}*/
+}
+
 
 const initialState = {isLoading: false, results: [], value: '' }
 

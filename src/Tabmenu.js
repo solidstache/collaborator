@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Menu, Segment, Container } from 'semantic-ui-react';
 import Home from './Home';
 import ProjectList from './Projects';
-import UsersPage from './UsersPage';
+import UsersPage from './Userspage';
 //import MyProfile from './MyProfile';
-import MyProject from './MyProjects';
+import MyProject from './Myprojects';
 import ProfileEdit from './ProfileEdit'
 //import MyProfile from './Experiment';
 
