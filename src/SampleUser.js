@@ -10,25 +10,13 @@ class SampleUser{
   }
 }
 
-const sampleUser1 = new SampleUser('The New One', 'Programmer',
+export const sampleUser1 = new SampleUser('The New One', 'Programmer',
     'C/C++, Java, Javascript','I am a fledging programmer looking for more experience! I am currently' +
     ' studying at WSUV and cannot wait to get in to the software engineering industry.', guestavatar);
 
-const sampleUser2 = new SampleUser('The New One', 'Programmer',
-    'C/C++, Java, Javascript','I am a fledging programmer looking for more experience! I am currently' +
-    ' studying at WSUV and cannot wait to get in to the software engineering industry.', guestavatar);
+export const sampleUser2 = new SampleUser('The Experienced One', 'Programmer', 'Java, Javascript, Ruby',
+    'I have been working on various web projects and been wanting to mentor newer programmers.', guestavatar);
 
-const sampleUsers = [
-  new SampleUser('The New One', 'Programmer',
-      'C/C++, Java, Javascript','I am a fledging programmer looking for more experience! I am currently' +
-      ' studying at WSUV and cannot wait to get in to the software engineering industry.', guestavatar),
-
-  new SampleUser('The Experienced One', 'Programmer', 'Java, Javascript, Ruby',
-    'I have been working on various web projects and been wanting to mentor newer programmers.', guestavatar),
-
-  new SampleUser('','','','', guestavatar)
-];
-
-
+export const sampleUsers = [ sampleUser1, sampleUser2];
 
 export default sampleUser1;
