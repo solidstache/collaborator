@@ -3,6 +3,7 @@ import { Popup, Segment, Container, Image, Icon, Card, Form } from 'semantic-ui-
 import guestavatar from './guestavatar.png';
 import Projects from './Projects';
 import sampleUser1 from './SampleUser';
+import {collaborateProject} from './ProjectClass';
 
 
 class ProfileEdit extends Component {
@@ -87,20 +88,21 @@ class ProfileEdit extends Component {
                     />
                   </p>
                   <Form.Button content='Submit'  />
-                  <Segment>{sampleUser1.header}</Segment>
-                  <Segment>{sampleUser1.meta}</Segment>
-                  <Segment>{sampleUser1.description}</Segment>
-                  <Segment>{sampleUser1.bio}</Segment>
                 </Segment>
               </Segment.Group>
               <Segment.Group>
+                <Segment><p>Name:</p>{sampleUser1.header}</Segment>
+                <Segment><p>Discipline:</p>{sampleUser1.meta}</Segment>
+                <Segment><p>Skills:</p>{sampleUser1.description}</Segment>
+                <Segment><p>Description:</p>{sampleUser1.bio}</Segment>
+              </Segment.Group>
+              <Segment.Group>
                 <h4>Projects Currently Collaborating on</h4>
-                <Projects/>
+                <Card.Group items={collaborateProject} />
               </Segment.Group>
             </Container>
           </Form>
         </div>
-
     )
 
   }

@@ -4,9 +4,11 @@ import Home from './Home';
 import ProjectList from './Projects';
 import UsersPage from './UsersPage';
 //import MyProfile from './MyProfile';
-import MyProject from './MyProjects';
+//import MyProject from './MyProjects';
 import ProfileEdit from './ProfileEdit'
 //import MyProfile from './Experiment';
+import ProjectEdit from './ProjectEdit';
+import CreateProject from './CreateProject';
 
 
 export default class MenuTabular extends Component{
@@ -32,7 +34,10 @@ export default class MenuTabular extends Component{
       page = <ProfileEdit/>;
     }
     if(pageState === 'My Projects'){
-      page = <MyProject/>;
+      page = <ProjectEdit/>;
+    }
+    if(pageState === 'Create Project'){
+      page = <CreateProject/>
     }
 
     return (
@@ -71,6 +76,13 @@ export default class MenuTabular extends Component{
               iconPosition='left'
               name='My Projects'
               active={activeItem === 'My Projects'}
+              onClick={this.handleItemClick}
+            />
+            <Menu.Item
+              icon='cogs'
+              iconPosition='left'
+              name='Create Project'
+              active={activeItem === 'Create Project'}
               onClick={this.handleItemClick}
             />
           </Menu>
