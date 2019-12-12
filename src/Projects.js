@@ -81,7 +81,6 @@ const items = [
 const items = [];
 for(var i = 0; i < sampleProjects.length; i++ ) {
 items.push({header: sampleProjects[i].projectName,
-	   className:  sampleProjects[i].userName,
 	   description: sampleProjects[i].description,
 	   meta: sampleProjects[i].userName,
 	   extra:  sampleProjects[i].likes + " likes"})

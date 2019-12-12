@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Segment, Container, Image, Icon } from 'semantic-ui-react';
 import guestavatar from './guestavatar.png';
 import Projects from './Projects'
+import { User, sampleUsers } from './UserClass.js'
 
 class SampleUser{
   constructor(header, meta, description, bio, image){
