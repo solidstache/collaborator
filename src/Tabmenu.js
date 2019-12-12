@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { Menu, Segment, Container } from 'semantic-ui-react';
 import Home from './Home';
 import ProjectList from './Projects';
-import Userspage from './Userspage';
-import Myprofile from './Myprofile';
-import Myproject from './Myprojects';
+import UsersPage from './UsersPage';
+//import MyProfile from './MyProfile';
+import MyProject from './MyProjects';
+import ProfileEdit from './ProfileEdit'
+//import MyProfile from './Experiment';
+
 
 export default class MenuTabular extends Component{
   state = { activeItem: 'home' };
@@ -23,13 +26,13 @@ export default class MenuTabular extends Component{
       page = <ProjectList/>;
     }
     if(pageState === 'users'){
-      page = <Userspage/>;
+      page = <UsersPage/>;
     }
     if(pageState === 'My Profile'){
-      page = <Myprofile/>;
+      page = <ProfileEdit/>;
     }
     if(pageState === 'My Projects'){
-      page = <Myproject/>;
+      page = <MyProject/>;
     }
 
     return (
