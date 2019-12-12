@@ -26,3 +26,4 @@ export const sampleProjects = [
 	new Project("MyFirstProject", "User6", "This is sample project 13", "Testing Phase",1234, ["User6"] )
 ];
 
+export const collaborateProject = [sampleProjects[0]];
