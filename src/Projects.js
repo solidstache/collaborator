@@ -77,7 +77,7 @@ const items = [
     meta: 'This is a subtitle'
   },
 ]
-*/
+/*
 const items = [];
 for(var i = 0; i < sampleProjects.length; i++ ) {
 items.push({header: sampleProjects[i].projectName,
@@ -86,6 +86,6 @@ items.push({header: sampleProjects[i].projectName,
 	   extra:  sampleProjects[i].likes + " likes",
 	   href: ('#project' + i + ' url')});
 }
-
-const ProjectGroupDisplay = () => <Card.Group items={ items } />;
+*/
+const ProjectGroupDisplay = () => <Card.Group items={ sampleProjects } />;
 export default ProjectGroupDisplay;
