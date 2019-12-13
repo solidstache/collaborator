@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Popup, Segment, Container, Image, Icon, Card, Form } from 'semantic-ui-react';
-import guestavatar from './guestavatar.png';
-import Projects from './Projects';
+import { Popup, Segment, Container, Image, Card, Form } from 'semantic-ui-react';
 import sampleUser1 from './SampleUser';
 import {collaborateProject} from './ProjectClass';
 
@@ -21,15 +19,15 @@ class ProfileEdit extends Component {
     const { header, discipline, skills, bio } = this.state;
 
     this.setState({submittedHeader: header, submittedDiscipline: discipline, submittedSkills: skills, submittedBio: bio});
-    sampleUser1.header = this.state.header.toString();
-    sampleUser1.meta = this.state.discipline.toString();
-    sampleUser1.description = this.state.skills.toString();
-    sampleUser1.bio = this.state.bio.toString();
+    sampleUser1.header = this.state.header;
+    sampleUser1.meta = this.state.discipline;
+    sampleUser1.description = this.state.skills;
+    sampleUser1.bio = this.state.bio;
 
   }
 
   render() {
-    const { header, discipline, skills, bio, submittedHeader, submittedDiscipline, submittedSkills, submittedBio } = this.state;
+    const { header, discipline, skills, bio } = this.state;
     return (
         <div>
           <Form onSubmit={this.handleSubmit}>

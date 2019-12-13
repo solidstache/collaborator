@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {Popup, Segment, Container, Image, Icon, Card, Form } from 'semantic-ui-react';
-import { Project, sampleProjects }  from './ProjectClass.js';
+import {Popup, Segment, Container, Image,Card, Form } from 'semantic-ui-react';
+import { sampleProjects }  from './ProjectClass.js';
 import sampleUser1 from './SampleUser';
-import sampleUsers from './SampleUser';
+
 
 class ProjectEdit extends Component{
   constructor(props){
@@ -19,13 +19,13 @@ class ProjectEdit extends Component{
     const {name, description, progress } = this.state;
 
     this.setState({submittedName: name, submittedDescription: description, submittedProgress: progress});
-    sampleProjects[0].projectName = this.state.name.toString();
-    sampleProjects[0].progress = this.state.progress.toString();
-    sampleProjects[0].description = this.state.description.toString();
+    sampleProjects[0].projectName = this.state.name;
+    sampleProjects[0].progress = this.state.progress;
+    sampleProjects[0].description = this.state.description;
   }
 
   render() {
-    const {name, description, progress, submittedName, submittedDescription, submittedProgress } = this.state;
+    const { name, description, progress } = this.state;
     return(
         <div>
           <Form onSubmit={this.handleSubmit}>

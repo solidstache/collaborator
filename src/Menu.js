@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import faker from 'faker';
-import { Dropdown, Container, Menu, Search, Grid, Header, Segment, Form, Input, Button, Label } from 'semantic-ui-react';
+import { Container, Menu, Search,  Form, Input, Button, Label } from 'semantic-ui-react';
 
 const loginForm = [
   { key: 1, text: 'Username', value: 1 },
@@ -20,16 +20,6 @@ export default () => (
       </Container>
     </Menu>
 )
-
-/*
- *
-              <Dropdown text='Login' loginform={loginForm} simple item/>
-              <Menu.Item  as="a" name="register" icon="user plus" iconPosition="left">
-                  Register
-              </Menu.Item>
- *
- * */
-
 
 class LoginForm extends React.Component {
 	constructor(props) {
@@ -50,10 +40,10 @@ class LoginForm extends React.Component {
 	}
 
 	render() {
-		if(this.status == "NoUser") {
+		if(this.status === "NoUser") {
 			return (
 			<Menu.Menu>
-        		<Menu.Item as="a" name="login" icon="user plus" iconPosition="left" 
+        		<Menu.Item as="a" name="login" icon="user plus" iconPosition="left"
 			onClick={() => this.handleLoginClicked()}>
 				Login
 			</Menu.Item>
@@ -61,7 +51,7 @@ class LoginForm extends React.Component {
                 		  Register
               		</Menu.Item>
 		</Menu.Menu>);
-		} else if(this.status == "LoggingIn") {
+		} else if(this.status === "LoggingIn") {
 			return (
 			<Menu.Item as="a" name="login">
 			  <Form>
@@ -72,7 +62,7 @@ class LoginForm extends React.Component {
 			    <Form.Field>
 			      <Input placeholder='Password'/>
 			    </Form.Field>
-	
+
 			    <Form.Field>
 			      <Button type='submit'
 				onClick={() => this.handleLogin()}>Submit </Button>
@@ -93,7 +83,7 @@ class LoginForm extends React.Component {
 	renderLoginOptions() {
 		return(
 			<Menu.Menu>
-        		<Menu.Item as="a" name="login" icon="user plus" iconPosition="left" 
+        		<Menu.Item as="a" name="login" icon="user plus" iconPosition="left"
 			onClick={() => this.handleLoginClicked()}>
 				Login
 			</Menu.Item>
@@ -114,7 +104,7 @@ class LoginForm extends React.Component {
 			    <Form.Field>
 			      <Input placeholder='Password'/>
 			    </Form.Field>
-	
+
 			    <Form.Field>
 			      <Button type='submit'
 				onClick={() => this.handleLogin()}>Submit </Button>

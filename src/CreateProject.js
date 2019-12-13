@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Segment, Container, Image, Form } from 'semantic-ui-react';
+import {Segment, Container, Form } from 'semantic-ui-react';
 import {sampleProjects, Project, collaborateProject} from './ProjectClass';
 import sampleUser1 from './SampleUser';
 
@@ -26,7 +26,7 @@ class CreateProject extends Component{
   }
 
   render(){
-    const {name, description, progress, submittedName, submittedDescription, submittedProgress} = this.state;
+    const { name, description, progress } = this.state;
     return(
         <div>
           <Form onSubmit={this.handleSubmit}>
