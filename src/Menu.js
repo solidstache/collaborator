@@ -6,7 +6,7 @@ import { Container, Menu, Search,  Form, Input, Button, Label } from 'semantic-u
 export default () => (
     <Menu className='top-menu'>
       <Container>
-	  <Menu.Menu position="center">
+	  <Menu.Menu position="left">
       <SearchProjects/>
 	  </Menu.Menu>
       <Menu.Menu position="right">
@@ -30,6 +30,7 @@ class LoginForm extends React.Component {
 	// Change this.userName assignment to be what was actually typed
 	handleLogin() {
 		this.status = "LoggedIn";
+		// Issue with using forms in react, so it doesn't actually set what was typed
 		this.userName = "user1";
 		this.forceUpdate();
 	}
@@ -38,11 +39,11 @@ class LoginForm extends React.Component {
 		if(this.status === "NoUser") {
 			return (
 			<Menu.Menu>
-        <Menu.Item as="a" name="login" icon="user plus" iconPosition="left"
+        <Menu.Item as="a" name="login"
 			  onClick={() => this.handleLoginClicked()}>
 				Login
 			</Menu.Item>
-        <Menu.Item  as="a" name="register" icon="user plus" iconPosition="left">
+        <Menu.Item  as="a" name="register" >
           Register
         </Menu.Item>
 		</Menu.Menu>);
@@ -68,7 +69,7 @@ class LoginForm extends React.Component {
 		} else {
 			return (
 			<Menu.Item as="a" name="login">
-				<Label/> Welcome, {this.userName}
+				Welcome, {this.userName}
 			</Menu.Item>
 		);
 		}
