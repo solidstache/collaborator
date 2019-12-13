@@ -3,7 +3,7 @@ import { Card } from 'semantic-ui-react';
 import { sampleUsers } from './UserClass.js'
 
 const items = [];
-for(var i = 0; i < sampleUsers.length; i++ ) {
+for(let i = 0; i < sampleUsers.length; i++ ) {
 items.push({header: sampleUsers[i].userName,
 	   href: ('#user' + i + 's url'),
 	   description: sampleUsers[i].description,

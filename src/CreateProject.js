@@ -11,7 +11,7 @@ class CreateProject extends Component{
     this.handleChange = this.handleChange.bind(this);
   }
 
-  state = {name: '', description: '', progress: '' }
+  state = {name: '', description: '', progress: '' };
 
   handleChange = (e, {name, value}) => this.setState({[name]: value});
 

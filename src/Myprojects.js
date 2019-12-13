@@ -26,7 +26,7 @@ const sampleUser1 = new SampleUser('The New One', 'Programmer',
     ' studying at WSUV and cannot wait to get in to the software engineering industry. ', guestavatar);
 
 const sampleUser2 = new SampleUser('The Experienced One', 'Programmer', 'Java, Javascript, Ruby',
-    'I have been working on various web projects and been wanting to mentor newer programmers.', guestavatar)
+    'I have been working on various web projects and been wanting to mentor newer programmers.', guestavatar);
 
 const sampleProject1 = new SampleProject('First Project', 'Windows Utility Program',
     [sampleUser1, sampleUser2], 'Java',
